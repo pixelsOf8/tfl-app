@@ -59,7 +59,13 @@
           },
           "configurations": {
             "production": {
-              "browserTarget": "tfl-app:build:production"
+              "browserTarget": "tfl-app:build:production",
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ]
             }
           }
         },
