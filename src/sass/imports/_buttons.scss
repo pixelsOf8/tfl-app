@@ -1,0 +1,58 @@
+@import "../variables";
+@import "../mixins/rem";
+
+@media (max-width: 576px) { }
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { }
+
+.btn {
+
+  &-common {
+    border: none;
+    cursor: pointer;
+    float: left;
+    @include rem(padding, 15px 25px);
+    /** Border Radius **/
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__primary {
+    background: $colour-1;
+    @extend .btn-common;
+  }
+
+  &__secondary {
+    background: $colour-3;
+    @extend .btn-common;
+  }
+
+  &__tertiary {
+    @extend .btn-common;
+  }
+
+  &__disabled {
+    background: $gainsboro;
+    opacity: .5;
+
+    &:hover {
+      cursor: not-allowed;
+    }
+  }
+
+}
