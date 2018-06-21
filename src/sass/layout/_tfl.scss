@@ -1,0 +1,53 @@
+@import "../mixins/rem";
+@import "../variables";
+
+/***
+  TFL
+ */
+html {
+  background: $gainsboro;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+
+  ::selection {
+    background: $colour-1;
+    color: $white;
+  }
+  ::-moz-selection {
+    background: $colour-1;
+    color: $white;
+  }
+
+  .content-container {
+    padding: 5%;
+  }
+  .container-fluid {
+    background: $white;
+    @include rem(padding, 0);
+    @include rem(margin, 0);
+    /** Border radius **/
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+  }
+  .container-fluid.coming-soon,
+  .container-fluid.welcome {
+    background: transparent;
+  }
+  .wrapper-inner {
+    background: $gainsboro;
+    height: 100vh;
+    @include rem(padding, 15px);
+  }
+
+  /***
+    Over-writing bootstrap
+   */
+  .row > .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
